@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="login-container">
+  <h1>Welcome</h1>
+  <input id="user" placeholder="Username">
+  <input id="pass" type="password" placeholder="Password">
+  <button id="loginBtn">Login</button>
+  <p>Don’t have an account? <a href="#" id="signupLink">Sign up</a></p>
+</div>
+
+<script>
+const user = document.getElementById("user");
+const pass = document.getElementById("pass");
+
+loginBtn.onclick = () => {
+  fetch("http://localhost:8080/api/auth/login", {
+    method: "POST",
+    headers: {"Content-Type":"application/json"},
+    body: JSON.stringify({ username:user.value, password:pass.value })
+  })
+  .then(res => res.text())
+  .then(r => {
+    if(r==="SUCCESS"){
+      localStorage.setItem("loggedUser", user.value);
+      location.href="planner.html";
+    } else alert("Invalid login");
+  });
+};
+
+signupLink.onclick = () => {
+  fetch("http://localhost:8080/api/auth/signup", {
+    method: "POST",
+    headers: {"Content-Type":"application/json"},
+    body: JSON.stringify({ username:user.value, password:pass.value })
+  })
+  .then(res=>res.text())
+  .then(alert);
+};
+</script>
+</body>
+</html>

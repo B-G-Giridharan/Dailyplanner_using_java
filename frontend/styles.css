@@ -1,0 +1,117 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #90caf9, #a5d6a7);
+  color: #222;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* Container for planner */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.8);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+h1 {
+  margin-top: 10px;
+}
+
+.logout-btn {
+  float: right;
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 10px;
+  cursor: pointer;
+  margin-top: -40px;
+}
+
+.logout-btn:hover {
+  background-color: #b71c1c;
+}
+
+/* Login Page */
+.login-container {
+  background: white;
+  width: 300px;
+  padding: 30px;
+  margin: 100px auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #aaa;
+}
+
+.login-container input {
+  display: block;
+  margin: 10px auto;
+  width: 80%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-container button {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.login-container button:hover {
+  background-color: #1b5e20;
+}
+
+/* Planner input area */
+.input-box {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  gap: 10px;
+}
+
+.input-box input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+}
+
+/* Task list */
+ul {
+  list-style: none;
+  padding: 0;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  margin: 10px 0;
+  padding: 10px 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
